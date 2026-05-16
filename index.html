@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthyBite - Dinh Dưỡng Cá Nhân Hóa</title>
+    <title>HealthyBite - Dinh Dưỡng Cho Gymer & Dân Thể Thao</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
         
-        /* Banner Quảng Cáo */
+        /* Banner Quảng Cáo Đậm Chất Thể Thao */
         .hero-banner {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('http://googleusercontent.com/image_collection/image_retrieval/1739771709320923965');
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop');
             background-size: cover; background-position: center;
-            height: 400px; display: flex; flex-direction: column;
+            height: 420px; display: flex; flex-direction: column;
             justify-content: center; align-items: center; color: white; text-align: center; padding: 20px;
         }
-        .hero-banner h1 { font-size: 3.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .hero-banner p { font-size: 1.25rem; max-width: 700px; }
+        .hero-banner h1 { font-size: 3.8rem; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); color: #2ecc71; font-weight: 800; }
+        .hero-banner p { font-size: 1.35rem; max-width: 800px; text-shadow: 1px 1px 2px rgba(0,0,0,0.6); font-weight: 500; }
 
         .container { max-width: 1100px; margin: -50px auto 50px; padding: 0 20px; }
 
@@ -24,118 +24,81 @@
         .meal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
         .meal-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
         .meal-card:hover { transform: translateY(-10px); }
-        .meal-card img { width: 100%; height: 200px; object-fit: cover; }
+        .meal-card img { width: 100%; height: 220px; object-fit: cover; }
         .meal-info { padding: 20px; text-align: center; }
-        .meal-info h3 { color: #2ecc71; font-size: 1.5rem; margin-bottom: 10px; }
-        .price { font-size: 1.4rem; color: #e74c3c; font-weight: bold; margin: 10px 0; }
+        .meal-info h3 { color: #2ecc71; font-size: 1.5rem; margin-bottom: 10px; font-weight: 700; }
+        .meal-info p { color: #666; font-size: 0.95rem; min-height: 66px; }
+        .price { font-size: 1.4rem; color: #e74c3c; font-weight: bold; margin: 15px 0 0 0; }
 
-        /* Vùng Quảng Cáo Thêm */
-        .promo-section { background: white; padding: 40px; border-radius: 15px; margin-bottom: 50px; text-align: center; }
-        .promo-section h2 { color: #2c3e50; margin-bottom: 20px; }
+        /* Vùng Quảng Cáo Độc Quyền Cho Dân Tập */
+        .promo-section { background: white; padding: 40px; border-radius: 15px; margin-bottom: 50px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .promo-section h2 { color: #2c3e50; margin-bottom: 20px; font-weight: 700; }
         .promo-benefits { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 30px; }
-        .benefit-item { flex: 1; min-width: 200px; }
-        .benefit-item i { font-size: 2rem; color: #2ecc71; margin-bottom: 10px; display: block; }
+        .benefit-item { flex: 1; min-width: 200px; padding: 10px; }
+        .benefit-item i { font-size: 2.5rem; color: #e67e22; margin-bottom: 15px; display: block; }
+        .benefit-item h4 { margin-bottom: 8px; color: #34495e; font-size: 1.2rem; }
+        .benefit-item p { color: #7f8c8d; font-size: 0.95rem; }
 
         /* Form Đăng Ký */
         .form-section { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .form-section h2 { text-align: center; margin-bottom: 30px; color: #2c3e50; }
+.form-section h2 { text-align: center; margin-bottom: 30px; color: #2c3e50; font-weight: 700; }
         .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
-        button { width: 100%; padding: 15px; background: #2ecc71; color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 20px; }
-button:hover { background: #27ae60; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #444; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; outline: none; }
+        input:focus, select:focus, textarea:focus { border-color: #2ecc71; }
+        button { width: 100%; padding: 15px; background: #2ecc71; color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 20px; transition: background 0.2s; }
+        button:hover { background: #27ae60; }
         
-        footer { text-align: center; padding: 30px; color: #7f8c8d; }
+        footer { text-align: center; padding: 30px; color: #fff; background: #2c3e50; margin-top: 50px; }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <section class="hero-banner">
-        <h1>HealthyBite</h1>
-        <p>Bữa ăn dinh dưỡng cá nhân hóa - Giải pháp hoàn hảo cho vóc dáng và sức khỏe của bạn.</p>
+        <h1>HealthyBite For Gymer</h1>
+        <p>Hệ thống suất ăn dinh dưỡng cá nhân hóa chuyên sâu cho anh em dân thể thao và gymer. Chuẩn hóa Macro - Bứt phá hiệu suất tập luyện!</p>
     </section>
 
     <div class="container">
         <div class="meal-grid">
             <div class="meal-card">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/16003616279185151043" alt="Gói Tăng Cơ">
+                <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?q=80&w=600&auto=format&fit=crop" alt="Gói Tăng Cơ">
                 <div class="meal-info">
-                    <h3>Gói Tăng Cơ (Gains)</h3>
-                    <p>Giàu Protein, hỗ trợ phát triển cơ bắp tối ưu.</p>
+                    <h3>Gói Xả Cơ Bulking (Gains)</h3>
+                    <p>Hàm lượng Protein siêu khủng từ ức gà, bò bắp, cá hồi. Cung cấp nguồn tinh bột phức hợp (cơm lứt, khoai lang) dồi dào để nuôi cơ bắp tối ưu.</p>
                     <div class="price">650.000 đ / Tuần</div>
                 </div>
             </div>
             <div class="meal-card">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/9824170724237372569" alt="Gói Giảm Cân">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=600&auto=format&fit=crop" alt="Gói Giảm Cân">
                 <div class="meal-info">
-                    <h3>Gói Giảm Cân (Slim)</h3>
-                    <p>Thâm hụt calo lành mạnh, dáng gọn eo thon.</p>
+                    <h3>Gói Siết Cơ Cutting (Slim)</h3>
+                    <p>Tối ưu hóa thâm hụt calo khắt khe, giàu chất xơ, cắt giảm tối đa chất béo xấu. Giúp đốt mỡ thừa, giữ nguyên khối lượng cơ nạc mong muốn.</p>
                     <div class="price">600.000 đ / Tuần</div>
                 </div>
             </div>
             <div class="meal-card">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/1393471287190821853" alt="Gói Sức Khỏe">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop" alt="Gói Sức Khỏe">
                 <div class="meal-info">
-                    <h3>Cân Bằng (Balance)</h3>
-                    <p>Duy trì năng lượng cho ngày dài làm việc.</p>
-                    <div class="price">580.000 đ / Tuần</div>
+                    <h3>Gói Thể Thao (Lean Fitness)</h3>
+                    <p>Cân bằng hoàn hảo tỷ lệ dinh dưỡng (Carbs - Protein - Fat). Duy trì thể lực bền bỉ, sức bền dẻo dai cho các buổi cardio và vận động cường độ cao.</p>
+<div class="price">580.000 đ / Tuần</div>
                 </div>
             </div>
         </div>
 
         <div class="promo-section">
-            <h2>Tại sao nên chọn HealthyBite?</h2>
+            <h2>Hệ Sinh Thái Dinh Dưỡng Chuẩn Macro</h2>
             <div class="promo-benefits">
                 <div class="benefit-item">
-                    <i class="fas fa-carrot"></i>
-                    <h4>Nguyên liệu sạch</h4>
-                    <p>Chuẩn VietGAP, tươi mới mỗi ngày từ nông trại.</p>
+                    <i class="fas fa-dumbbell"></i>
+                    <h4>Cân Đo Chuẩn Gram</h4>
+                    <p>Mọi thành phần nguyên liệu thô đều được cân điện tử chính xác để kiểm soát chặt chẽ lượng Calo nạp vào.</p>
                 </div>
                 <div class="benefit-item">
-                    <i class="fas fa-calculator"></i>
-                    <h4>Cá nhân hóa</h4>
-                    <p>Tính toán Calo chính xác theo thể trạng từng người.</p>
+                    <i class="fas fa-fire-alt"></i>
+                    <h4>Rõ Ràng Chỉ Số</h4>
+                    <p>Mỗi hộp cơm đều được dán kèm tem nhãn in rõ chỉ số Macro cụ thể (Protein, Tinh bột, Chất béo) của bữa ăn.</p>
                 </div>
-                <div class="benefit-item">
-                    <i class="fas fa-truck"></i>
-                    <h4>Giao hàng đúng giờ</h4>
-                    <p>Suất ăn luôn ấm nóng trước 11h30 trưa.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-section">
-            <h2>ĐĂNG KÝ NGAY HÔM NAY</h2>
-<form onsubmit="event.preventDefault(); alert('Cảm ơn bạn! HealthyBite sẽ liên hệ tư vấn trong vòng 15 phút.');">
-                <div class="form-group">
-                    <label>Họ và Tên *</label>
-                    <input type="text" required placeholder="Nguyễn Văn A">
-                </div>
-                <div class="form-group">
-                    <label>Số điện thoại *</label>
-                    <input type="tel" required placeholder="09xx xxx xxx">
-                </div>
-                <div class="form-group">
-                    <label>Gói dịch vụ quan tâm *</label>
-                    <select>
-                        <option>Gói Tăng Cơ (Gains)</option>
-                        <option>Gói Giảm Cân (Slim)</option>
-                        <option>Gói Sức Khỏe (Balance)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Địa chỉ giao hàng *</label>
-                    <textarea rows="3" required placeholder="Số nhà, tên đường, quận..."></textarea>
-                </div>
-                <button type="submit">XÁC NHẬN ĐĂNG KÝ</button>
-            </form>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2026 HealthyBite Startup - Kỹ năng Khởi nghiệp - UET</p>
-    </footer>
-
-</body>
-</html>
+                <div
